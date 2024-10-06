@@ -17,6 +17,17 @@ const Page = async () => {
           Signin with GitHub
         </button>
       </form>
+      
+      <form
+        action={async () => {
+          'use server'
+          await signIn('google')
+        }}
+      >
+        <button className="rounded-md border px-8 py-2.5" type="submit">
+          Signin with Google
+        </button>
+      </form>
     </div>
   )
 }
