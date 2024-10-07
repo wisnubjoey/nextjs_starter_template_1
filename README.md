@@ -1,5 +1,6 @@
 <h1>Ikuti instruksi cara penginstall an</h1>
-<h1>dan .env.local</h1>
+<h1>Atau kamu bisa generate langsung dengan npx create-bjoey-next-app@latest</h1>
+<h1>Dan .env.local</h1>
 <h1>npx auth secret <= untuk menambahkan auth secret</h1>
 <h1>Jangan lupa migrate drizzle</h1>
 
