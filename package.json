@@ -1,7 +1,10 @@
 {
-  "name": "starter_onset1",
+  "name": "create-bjoey-next-starter",
   "version": "0.1.0",
-  "private": true,
+  "type": "module",
+  "bin": {
+    "create-bjoey-next-starter": "./index.js"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,8 +16,10 @@
   "dependencies": {
     "@auth/drizzle-adapter": "^1.5.3",
     "clsx": "^2.1.1",
+    "commander": "^12.1.0",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.33.0",
+    "inquirer": "^9.2.15",
     "nanoid": "^5.0.7",
     "next": "14.2.14",
     "next-auth": "^5.0.0-beta.22",
@@ -34,5 +39,10 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  }
+  },
+  "description": "<h1>Ikuti instruksi cara penginstall an</h1>\r <h1>dan .env.local</h1>",
+  "main": "index.js",
+  "keywords": ["next", "react", "template"],
+  "author": "BjoeyTest",
+  "license": "MIT"
 }

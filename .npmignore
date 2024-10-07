@@ -1,0 +1,21 @@
+# Ignore development-specific files
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignore version control files
+.git/
+.gitignore
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore test files (if you have any)
+__tests__/
+*.test.js
+
+# Ignore personal configuration files
