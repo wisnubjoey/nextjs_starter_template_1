@@ -71,7 +71,7 @@ async function main() {
     console.log(`
 Success! Created ${projectName} at ${projectDir}
 
-Full instruction to run the project: https://github.com/wisnubjoey/nextjs_starter_template_1
+Full instruction to run the project: github.com/wisnubjoey/nextjs_starter_template_1
 
 Inside that directory, you can run several commands:
 
