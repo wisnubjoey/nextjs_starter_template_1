@@ -88,10 +88,28 @@ We suggest that you begin by typing:
 
 Project Generated Successfully !
     `);
+
+    // Tambahkan langkah untuk menghapus index.js
+    await removeIndexJs(projectDir);
   } catch (error) {
     console.error('An error occurred:', error.message);
     if (error.stack) console.error(error.stack);
     process.exit(1);
+  }
+}
+
+// Fungsi baru untuk menghapus index.js
+async function removeIndexJs(projectDir) {
+  const indexJsPath = path.join(projectDir, 'index.js');
+  try {
+    await fs.unlink(indexJsPath);
+    console.log('Removed index.js from the generated project');
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      console.log('index.js does not exist in the generated project');
+    } else {
+      console.error('Error removing index.js:', error.message);
+    }
   }
 }
 
