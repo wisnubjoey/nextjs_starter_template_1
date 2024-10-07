@@ -34,3 +34,5 @@ next-env.d.ts
 
 # Ignore index.js
 index.js
+
+/index.js
