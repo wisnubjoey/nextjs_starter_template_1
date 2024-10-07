@@ -6,6 +6,7 @@ import { promisify } from 'util';
 import { exec as execCallback } from 'child_process';
 import inquirer from 'inquirer';
 import { program } from 'commander';
+import ora from 'ora';
 
 const exec = promisify(execCallback);
 
@@ -51,8 +52,9 @@ async function main() {
       process.exit(1);
     }
 
-    console.log('Cloning template repository...');
+    const spinner = ora('Cloning template repository...').start();
     await exec(`git clone https://github.com/wisnubjoey/nextjs_starter_template_1.git ${projectDir}`);
+    spinner.succeed('Template repository cloned successfully');
 
     await fs.rm(path.join(projectDir, '.git'), { recursive: true, force: true });
 
@@ -62,13 +64,14 @@ async function main() {
     packageJson.version = '0.1.0';
     await fs.writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2));
 
-    console.log('Installing dependencies...');
+    spinner.start('Installing dependencies...');
     await exec('npm install', { cwd: projectDir });
+    spinner.succeed('Dependencies installed successfully');
 
     console.log(`
 Success! Created ${projectName} at ${projectDir}
 
-Masukan CLIENT_ID Environtment nya agar project dapat berjalan dengan sesuai
+Full instruction to run the project: https://github.com/wisnubjoey/nextjs_starter_template_1
 
 Inside that directory, you can run several commands:
 
@@ -98,12 +101,12 @@ Project Generated Successfully !
   }
 }
 
-// Fungsi baru untuk menghapus index.js
+// Fungsi untuk menghapus index.js
 async function removeIndexJs(projectDir) {
   const indexJsPath = path.join(projectDir, 'index.js');
   try {
     await fs.unlink(indexJsPath);
-    console.log('Removed index.js from the generated project');
+    console.log('Happy Coding!');
   } catch (error) {
     if (error.code === 'ENOENT') {
       console.log('index.js does not exist in the generated project');

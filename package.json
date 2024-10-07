@@ -1,6 +1,6 @@
 {
   "name": "create-bjoey-next-starter",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "bin": {
     "create-bjoey-next-starter": "./index.js"
@@ -23,6 +23,7 @@
     "nanoid": "^5.0.7",
     "next": "14.2.14",
     "next-auth": "^5.0.0-beta.22",
+    "ora": "^8.1.0",
     "pglaunch": "^2.20.0",
     "postgres": "^3.4.4",
     "react": "^18",
@@ -42,7 +43,11 @@
   },
   "description": "<h1>Ikuti instruksi cara penginstall an</h1>\r <h1>dan .env.local</h1>",
   "main": "index.js",
-  "keywords": ["next", "react", "template"],
+  "keywords": [
+    "next",
+    "react",
+    "template"
+  ],
   "author": "BjoeyTest",
   "license": "MIT"
 }
