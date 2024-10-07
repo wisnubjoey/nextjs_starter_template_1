@@ -18,4 +18,8 @@ yarn-error.log
 __tests__/
 *.test.js
 
-# Ignore personal configuration files
+# Do not ignore index.js as it's needed for the npm package
+!index.js
+
+# Ignore any other files or directories specific to your project
+# that shouldn't be part of the npm package
