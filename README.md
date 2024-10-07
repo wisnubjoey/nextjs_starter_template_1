@@ -1,5 +1,7 @@
 <h1>Ikuti instruksi cara penginstall an</h1>
 <h1>dan .env.local</h1>
+<h1>npx auth secret <= untuk menambahkan auth secret</h1>
+<h1>Jangan lupa migrate drizzle</h1>
 
 <a href="https://nextjs.org">
   <h1 align="center">Onset Next.js Starter 2024</h1>
